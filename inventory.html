@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>PIMApp</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+<script src="bootstable.min.js"></script>
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout products_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><h2>PIMApp</h2></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item ">
+                                 <a class="nav-link" href="index.html"> Home  </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="prices.html">Prices</a>
+                              </li>
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="inventory.html">Inventory </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="sales.html">Sales</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Contact Us</a>
+                              </li>
+                              <li class="nav-item d_none">
+                                 <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                              </li>
+                              <li class=" d_none get_btn">
+                                 <a  href="contact.html">Register</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+
+
+
+      <!-- product  section -->
+      <div class="product">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="titlepage">
+                     <h2>Product Inventory List</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="row">
+                                    
+                  <div style="width:70%; margin: auto;">
+                  <table class="table" id="makeEditable">
+                      <thead>
+                        <tr>
+                          <th>Inventory ID</th>
+                          <th>Product Name</th>
+                          <th>Unit Price</th>
+                          <th>Quantity in Stock</th>
+                          <th>Inventory Value</th>
+                          <th>Reorder Level</th>
+                          <th>Reorder Time in Days</th>
+                          <th>Quantity in Reorder</th>
+                          <th><span style="float:right"><button id="but_add">Add New Row</button></span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="active">
+                          <td>INV0001</td>
+                          <td>Mega Green</td>
+                          <td>₱23.00</td>
+                          <td>30</td>
+                          <td>₱690.00</td>
+                          <td>29</td>
+                          <td>13</td>
+                          <td>50</td>
+                        </tr>      
+                        <tr class="active">
+                          <td>INV0002</td>
+                          <td>Century Tuna</td>
+                          <td>₱36.00</td>
+                          <td>35</td>
+                          <td>₱1260.00</td>
+                          <td>10</td>
+                          <td>5</td>
+                          <td>50</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0003</td>
+                          <td>Argentina</td>
+                          <td>₱42.00</td>
+                          <td>25</td>
+                          <td>₱1050.00</td>
+                          <td>35</td>
+                          <td>2</td>
+                          <td>100</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0004</td>
+                          <td>CDO Karne Norte</td>
+                          <td>₱36.00</td>
+                          <td>10</td>
+                          <td>₱360.00</td>
+                          <td>10</td>
+                          <td>1</td>
+                          <td>50</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0005</td>
+                          <td>Wow  Ulam</td>
+                          <td>₱23.00</td>
+                          <td>30</td>
+                          <td>₱690.00</td>
+                          <td>40</td>
+                          <td>14</td>
+                          <td>50</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0006</td>
+                          <td>San Marino Corned Tuna</td>
+                          <td>₱37.00</td>
+                          <td>15</td>
+                          <td>₱555.00</td>
+                          <td>25</td>
+                          <td>10</td>
+                          <td>50</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0007</td>
+                          <td>Ligo Sardines</td>
+                          <td>₱23.00</td>
+                          <td>45</td>
+                          <td>₱1035.00</td>
+                          <td>60</td>
+                          <td>21</td>
+                          <td>50</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0008</td>
+                          <td>Hunt's Pork & Beans</td>
+                          <td>₱25.00</td>
+                          <td>3</td>
+                          <td>₱75.00</td>
+                          <td>10</td>
+                          <td>1</td>
+                          <td>60</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0009</td>
+                          <td>Commercial Rice</td>
+                          <td>₱48.00</td>
+                          <td>10</td>
+                          <td>₱480.00</td>
+                          <td>5</td>
+                          <td>2</td>
+                          <td>25</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0010</td>
+                          <td>Dinorado Rice</td>
+                          <td>₱55.00</td>
+                          <td>15</td>
+                          <td>₱825.00</td>
+                          <td>8</td>
+                          <td>5</td>
+                          <td>25</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0011</td>
+                          <td>Sinandomeng Rice</td>
+                          <td>₱52.00</td>
+                          <td>12</td>
+                          <td>₱624.00</td>
+                          <td>21</td>
+                          <td>6</td>
+                          <td>25</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0012</td>
+                          <td>Piattos Cheese</td>
+                          <td>₱14.00</td>
+                          <td>20</td>
+                          <td>₱280.00</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0013</td>
+                          <td>Nova Cheddar</td>
+                          <td>₱14.00</td>
+                          <td>15</td>
+                          <td>₱210.00</td>
+                          <td>11</td>
+                          <td>3</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0014</td>
+                          <td>Dingdong Mixed Nuts</td>
+                          <td>₱21.00</td>
+                          <td>5</td>
+                          <td>₱105.00</td>
+                          <td>7</td>
+                          <td>3</td>
+                          <td>20</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0015</td>
+                          <td>Cracklings</td>
+                          <td>₱8.00</td>
+                          <td>15</td>
+                          <td>₱120.00</td>
+                          <td>10</td>
+                          <td>2</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0016</td>
+                          <td>Pillows Chocolate</td>
+                          <td>₱9.00</td>
+                          <td>10</td>
+                          <td>₱90.00</td>
+                          <td>5</td>
+                          <td>6</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0017</td>
+                          <td>Loaded Chocolate</td>
+                          <td>₱9.00</td>
+                          <td>15</td>
+                          <td>₱135.00</td>
+                          <td>2</td>
+                          <td>1</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0018</td>
+                          <td>Pee Wee Pizza</td>
+                          <td>₱8.00</td>
+                          <td>25</td>
+                          <td>₱200.00</td>
+                          <td>17</td>
+                          <td>4</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0019</td>
+                          <td>Oishi Prawn Crackers</td>
+                          <td>₱8.00</td>
+                          <td>14</td>
+                          <td>₱112.00</td>
+                          <td>10</td>
+                          <td>2</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0020</td>
+                          <td>V-Cut Chips</td>
+                          <td>₱14.00</td>
+                          <td>14</td>
+                          <td>₱196.00</td>
+                          <td>13</td>
+                          <td>3</td>
+                          <td>20</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0021</td>
+                          <td>Crispy Patata</td>
+                          <td>₱8.00</td>
+                          <td>14</td>
+                          <td>₱112.00</td>
+                          <td>10</td>
+                          <td>3</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0022</td>
+                          <td>Coca-Cola</td>
+                          <td>₱15.00</td>
+                          <td>48</td>
+                          <td>₱720.00</td>
+                          <td>15</td>
+                          <td>7</td>
+                          <td>96</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0023</td>
+                          <td>Sprite</td>
+                          <td>₱15.00</td>
+                          <td>36</td>
+                          <td>₱540.00</td>
+                          <td>15</td>
+                          <td>7</td>
+                          <td>84</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0024</td>
+                          <td>Royal</td>
+                          <td>₱15.00</td>
+                          <td>46</td>
+                          <td>₱690.00</td>
+                          <td>10</td>
+                          <td>7</td>
+                          <td>72</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0025</td>
+                          <td>Mountain Dew</td>
+                          <td>₱18.00</td>
+                          <td>36</td>
+                          <td>₱648.00</td>
+                          <td>12</td>
+                          <td>7</td>
+                          <td>48</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0026</td>
+                          <td>Cobra Energy Drink</td>
+                          <td>₱25.00</td>
+                          <td>16</td>
+                          <td>₱400.00</td>
+                          <td>5</td>
+                          <td>7</td>
+                          <td>25</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0027</td>
+                          <td>Emperador Lights (Jumbo)</td>
+                          <td>₱155.00</td>
+                          <td>24</td>
+                          <td>₱3720.00</td>
+                          <td>6</td>
+                          <td>14</td>
+                          <td>36</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0028</td>
+                          <td>San Miguel Gin</td>
+                          <td>₱60.00</td>
+                          <td>24</td>
+                          <td>₱1440.00</td>
+                          <td>4</td>
+                          <td>7</td>
+                          <td>60</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0029</td>
+                          <td>Alfonso Lights (Litro)</td>
+                          <td>₱315.00</td>
+                          <td>15</td>
+                          <td>₱4725.00</td>
+                          <td>6</td>
+                          <td>21</td>
+                          <td>18</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0030</td>
+                          <td>Safeguard</td>
+                          <td>₱35.00</td>
+                          <td>9</td>
+                          <td>₱315.00</td>
+                          <td>1</td>
+                          <td>7</td>
+                          <td>12</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0031</td>
+                          <td>Silka Papaya</td>
+                          <td>₱35.00</td>
+                          <td>6</td>
+                          <td>₱210.00</td>
+                          <td>2</td>
+                          <td>7</td>
+                          <td>14</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0032</td>
+                          <td>Palmolive Shampoo (Sachet)</td>
+                          <td>₱7.00</td>
+                          <td>35</td>
+                          <td>₱245.00</td>
+                          <td>10</td>
+                          <td>5</td>
+                          <td>40</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0033</td>
+                          <td>Head & Shoulders</td>
+                          <td>₱7.00</td>
+                          <td>20</td>
+                          <td>₱140.00</td>
+                          <td>2</td>
+                          <td>6</td>
+                          <td>40</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0034</td>
+                          <td>Rexona</td>
+                          <td>₱10.00</td>
+                          <td>25</td>
+                          <td>₱250.00</td>
+                          <td>1</td>
+                          <td>7</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0035</td>
+                          <td>Rejoice (Sachet)</td>
+                          <td>₱7.00</td>
+                          <td>9</td>
+                          <td>₱63.00</td>
+                          <td>5</td>
+                          <td>7</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0036</td>
+                          <td>Keratin Shampoo (Sachet)</td>
+                          <td>₱7.00</td>
+                          <td>16</td>
+                          <td>₱112.00</td>
+                          <td>5</td>
+                          <td>7</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0037</td>
+                          <td>Dove Shampoo (Sachet)</td>
+                          <td>₱7.00</td>
+                          <td>12</td>
+                          <td>₱84.00</td>
+                          <td>8</td>
+                          <td>7</td>
+                          <td>30</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0038</td>
+                          <td>Colgate (Sachet)</td>
+                          <td>₱10.00</td>
+                          <td>8</td>
+                          <td>₱80.00</td>
+                          <td>6</td>
+                          <td>7</td>
+                          <td>24</td>
+                        </tr>
+                        <tr class="active">
+                          <td>INV0039</td>
+                          <td>Close Up (Sachet)</td>
+                          <td>₱10.00</td>
+                          <td>12</td>
+                          <td>₱120.00</td>
+                          <td>6</td>
+                          <td>7</td>
+                          <td>24</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <script>
+                   $('#makeEditable').SetEditable({ $addButton: $('#but_add')});
+                  </script>
+
+            </div>
+         </div>
+      </div>
+      <!-- end Inventory section -->
+
+
+      <!--  footer -->
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>2022 <a href="https://html.design/">Group C3 - Application Development and Emerging Technology <br/></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
