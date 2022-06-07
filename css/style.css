@@ -770,9 +770,8 @@ ul.btn li:last-child {
 }
 
 .product-categ ul li{
-     padding: 55px 50px 50px;
-     padding-left: 89px;
-     display: inline-block;
+     padding: 30px 20px 20px 140px;
+     /* display: inline-block; */
      font-size: 16px;
      font-weight: bolder;
 }
@@ -866,7 +865,7 @@ ul.btn li:last-child {
 }
 
 .about_Carousel .test_box h4 {
-     font-size: 30px;
+     font-size: 18px;
      color: #1d1c1c;
      line-height: 18px;
      display: block;
@@ -888,7 +887,7 @@ ul.btn li:last-child {
 }
 
 .about_Carousel .test_box p {
-     font-size: 25px;
+     font-size: 15px;
      line-height: 28px;
      color: #fff;
      text-align: left;
@@ -1149,4 +1148,3 @@ ul.link li a::after {
 .products_page .product .titlepage {
      margin-top: 70px;
 }
-
